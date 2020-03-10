@@ -1,3 +1,4 @@
-test('Assert that tests can run', () => {
-  expect(true).toBe(true);
+import { ServiceFactories } from './../src/index';
+test('ServiceFactories is a Map', () => {
+  expect(ServiceFactories).toBeInstanceOf(Map);
 });
