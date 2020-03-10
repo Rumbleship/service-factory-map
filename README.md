@@ -1,22 +1,7 @@
-# Template Library
+# Service Factory Map
 
-This is a template for any subsequent TypeScript library that Rumbleship will create.
+This map is exported as a package for easy of hooking into the native Jest mocking system.
 
-## Getting Going:
-
-- Fork this repo.
-- Ensure the Rumbleship Organization owns the new repo.
-
-  - Update package name to be `@rumbleship/new-libary-name.`
-
-- Automated building via Circle:
-  - `./.circleci/config.yml`:
-    - sed `/template-library` for `new-library-name`
-    - Add whatever new build rules, setup, etc are needed (optional)
-  - Enabling building [https://circleci.com/add-projects/gh/Rumbleship](https://circleci.com/add-projects/gh/Rumbleship.).
-    - Click "Set Up Project"
-    - Click "Start Building" (all configuration expected is already present)
-  - Ensure Circle has the Rumbleship Ops User SSH key
-    - https://circleci.com/gh/Rumbleship/{{new-repo-name}}/edit#ssh
-    - Copy key from `sextant/vault/ssh/rumbleship-ops.key`
-    - Add it twice, once with host `github.com`, and once with a blank host
+It's difficult to mock out a module defined inside a service reliably (issues with resolving 
+compiled js vs origal ts files) at a global test level, which we need to do to ensure the Beeline
+is correctly configured.
