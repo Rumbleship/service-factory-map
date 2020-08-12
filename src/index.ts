@@ -3,5 +3,14 @@ export interface RFIFactory<T> {
 }
 
 export abstract class ServiceFactoryMap extends Map<string, RFIFactory<any>> {}
-class SingletonMap extends ServiceFactoryMap {}
+class SingletonMap extends ServiceFactoryMap {
+  resetForTests(force: boolean = false) {
+    if (force) {
+      return this.clear();
+    }
+    const beelineFactory = this.get('beelineFactory');
+    this.clear();
+    this.set('beelineFactory', beelineFactory!);
+  }
+}
 export const ServiceFactories = new SingletonMap();
