@@ -4,7 +4,7 @@ export interface RFIFactory<T> {
 export declare abstract class ServiceFactoryMap extends Map<string, RFIFactory<any>> {
 }
 declare class SingletonMap extends ServiceFactoryMap {
-    testClear(force?: boolean): void;
+    resetForTests(force?: boolean): void;
 }
 export declare const ServiceFactories: SingletonMap;
 export {};

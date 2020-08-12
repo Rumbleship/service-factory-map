@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [UNRELEASED]
 
 ### Added
-  * `testClear` to zero-out the map but retain the BeelineFactory if desired
+  * `resetForTests` to zero-out the map but retain the BeelineFactory if desired
 ### Removed
 ### Changed
 ### Fixed
