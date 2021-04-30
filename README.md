@@ -1,4 +1,5 @@
 # Service Factory Map
+Enable trivial dependency injection for writing tests against a fully configured [Rumbleship GQL Framework](https://github.com/rumbleship/rfi-gql-framework/) application.
 
 This map is exported as a package for easy of hooking into the native Jest mocking system.
 

@@ -5,8 +5,8 @@
     "Isaac Sparling <isaac@rumbleship.com"
   ],
   "main": "lib/index.js",
-  "description": "Template for new TypeScript libraries at Rumbleship",
-  "license": "UNLICENSED",
+  "description": "dependency injection for tests within the rumbleship framework family of services",
+  "license": "mit)",
   "private": true,
   "engines": {
     "node": "10.x || 12.x"
